@@ -18,7 +18,7 @@ st.set_page_config(
 def load_model_package():
     try:
         # Loading the NEW universal model
-        package = joblib.load('universal_bearing_model.joblib')
+        package = joblib.load('universal_model.joblib')
         return package
     except FileNotFoundError:
         return None
