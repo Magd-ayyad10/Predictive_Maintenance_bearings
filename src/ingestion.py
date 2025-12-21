@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from src.features import calculate_snapshot_features
 
+
 def get_true_path(base, folder):
     """Recursively finds data folder handling nested structures."""
     curr = os.path.join(base, folder)
@@ -11,6 +12,7 @@ def get_true_path(base, folder):
     if os.path.exists(os.path.join(curr, "4th_test", "txt")): return os.path.join(curr, "4th_test", "txt")
     if os.path.exists(os.path.join(curr, "txt")): return os.path.join(curr, "txt")
     return curr
+
 
 def load_dataset(base_path):
     """Iterates through folders and returns a combined DataFrame."""
@@ -46,7 +48,7 @@ def load_dataset(base_path):
     # Final DataFrame Construction
     df = pd.DataFrame(all_records)
     
-    # Try parsing timestamp
+    
     try:
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='%Y.%m.%d.%H.%M.%S')
     except:

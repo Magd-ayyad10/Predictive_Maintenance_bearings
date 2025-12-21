@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.stats import skew, kurtosis
 
+
 def calculate_snapshot_features(signal_data, set_name):
     """
     Extracts 20 features from raw signal data.

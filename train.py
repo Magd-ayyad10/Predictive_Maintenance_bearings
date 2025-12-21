@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-
 from src.config import data_path, model_save_path, train_split_ratio, pca_components, threshold_buffer
 from src.ingestion import load_dataset
+
 
 def train_pipeline():
     # 1. Ingestion
